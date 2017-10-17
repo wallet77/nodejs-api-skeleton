@@ -34,3 +34,12 @@ npm run tests
 ## Coverage
 Coverage can be found in coverage directory in root directory.
 
+
+# Documentation
+
+## Generates documentation
+```bash
+grunt doc
+```
+
+
