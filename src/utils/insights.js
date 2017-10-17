@@ -3,7 +3,16 @@
 const config = require('../../config/insights.json');
 const Insights = require('node-insights');
 
+/**
+ * Class acts as a wrapper to request insights system
+ */
 class InsightsUtils {
+  /**
+   * Method to execute a query
+   *
+   * @param {String} query - an object representing express request
+   * @returns {Promise}
+   */
   executeQuery (query) {
     const insights = new Insights({
       queryKey: config.apiKey,
