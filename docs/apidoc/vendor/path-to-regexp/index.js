@@ -19,7 +19,7 @@ var PATH_REGEXP = new RegExp([
   // Match Express-style parameters and un-named parameters with a prefix
   // and optional suffixes. Matches appear as:
   //
-  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?"]
+  // "/:tests(\\d+)?" => ["/", "tests", "\d+", undefined, "?"]
   // "/route(\\d+)" => [undefined, undefined, undefined, "\d+", undefined]
   '([\\/.])?(?:\\:(\\w+)(?:\\(((?:\\\\.|[^)])*)\\))?|\\(((?:\\\\.|[^)])*)\\))([+*?])?',
   // Match regexp special characters that are always escaped.
@@ -187,7 +187,7 @@ function pathToRegexp (path, keys, options) {
   // In non-strict mode we allow a slash at the end of match. If the path to
   // match already ends with a slash, we remove it for consistency. The slash
   // is valid at the end of a path match, not in the middle. This is important
-  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  // in non-ending mode, where "/tests/" shouldn't match "/tests//route".
   if (!strict) {
     route = (endsWithSlash ? route.slice(0, -2) : route) + '(?:\\/(?=$))?';
   }
