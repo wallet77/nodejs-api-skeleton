@@ -18,7 +18,7 @@
     "express": "4.15.3",
     "helmet": "3.8.1",
     "jwt-simple": "0.5.1",
-    "moment": "2.18.1",
+    "moment": "2.19.3",
     "node-insights": "1.0.15"
   },
   "devDependencies": {
